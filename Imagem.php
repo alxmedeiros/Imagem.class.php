@@ -17,7 +17,7 @@ class Imagem {
     private $nLargura = 400;
     private $nAltura  = 300;
 
-    public $orientation = "RETRATO";
+    public $orientation = "PORTRAIT";
     private $_save      = false;
     private $nName      = "";
     
@@ -101,9 +101,9 @@ class Imagem {
     private function defineOrientation() {
         
         if ( $this->width >= $this->height ) {
-            $this->orientation = "RETRATO";
+            $this->orientation = "LANDSCAPE";
         } else {
-            $this->orientation = "PAISAGEM";
+            $this->orientation = "PORTRAIT";
         }
 
     }
@@ -172,7 +172,7 @@ class Imagem {
 			
         } else {
         	
-            if ( $this->orientation == "RETRATO" ) {
+            if ( $this->orientation == "PORTRAIT" ) {
 
                 if ( ($largura != 0) && ($altura == 0) ) {
                     $this->nLargura = $largura;
